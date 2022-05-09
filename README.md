@@ -28,11 +28,11 @@ npm install react-awesome-waypoint
 
 | Paramters 	| Default | Description 	| Required 	| 
   |------------	| ---------	|----------	| --------- 	|
-  | children: `string` 	| `undefined` 	| The actual target to be rendered. If you don't pass 'children' props, then an empty 'span' element will be rendered instead. 	| X 	| 
+  | children: `React.ReactNode` 	| `undefined` 	| The actual target to be rendered. If you don't pass 'children' props, then an empty 'span' element will be rendered instead. 	| X 	| 
   | onEnter: `() => void` 	| `undefined` 	| Callback executed when entered(exposed) on a viewport. 	| X 	|
   | onLeave: `() => void` 	| `undefined`	| Callback executed when leaved on a viewport. 	| X 	|
-  | root: `Element | Document | null | undefined` 	| `null` 	| Specifies the element object (root element) to be used instead of the viewport to check the visibility of the target. If not specified or `null`, the browser's viewport is used by default.	| X 	|
-  | threshold: `number | number[] | undefined` 	| `[0]` 	| The percentage of how much visibility of the target is required for the observer to run. When set to `0` or `[0]`, the observer runs as soon as the edge pixel of the target crosses the root range.  	| X 	|
+  | root: `Element` or `Document` or `null` or `undefined` 	| `null` 	| Specifies the element object (root element) to be used instead of the viewport to check the visibility of the target. If not specified or `null`, the browser's viewport is used by default.	| X 	|
+  | threshold: `number` or `number[]` or `undefined` 	| `[0]` 	| The percentage of how much visibility of the target is required for the observer to run. When set to `0` or `[0]`, the observer runs as soon as the edge pixel of the target crosses the root range.  	| X 	|
   | topOffset: `string` 	| `'0px'` 	| Use the outer `top margin` to expand or contract the Root range. 	| X 	|
   | bottomOffset: `string` 	| `'0px'` 	| Use the outer `bottom margin` to expand or contract the Root range. 	| X 	|
   | leftOffset: `string` 	| `'0px'` 	| Use the outer `left margin` to expand or contract the Root range. 	| X 	|

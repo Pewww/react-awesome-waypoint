@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, cloneElement } from 'react';
 
-interface WaypointProps {
+export interface WaypointProps {
   children?: React.ReactNode;
   onEnter?: () => void;
   onLeave?: () => void;
@@ -8,6 +8,8 @@ interface WaypointProps {
   threshold?: number | number[] | undefined;
   topOffset?: string;
   bottomOffset?: string;
+  leftOffset?: string;
+  rightOffset?: string;
 }
 
 const Waypoint: React.FC<WaypointProps> = ({
@@ -16,8 +18,10 @@ const Waypoint: React.FC<WaypointProps> = ({
   onLeave,
   root,
   threshold,
-  topOffset,
-  bottomOffset
+  topOffset = '0px',
+  bottomOffset = '0px',
+  leftOffset = '0px',
+  rightOffset = '0px'
 }) => {
   const customRef = useRef<HTMLElement>(null);
 
@@ -36,7 +40,7 @@ const Waypoint: React.FC<WaypointProps> = ({
     }, {
       root,
       threshold,
-      rootMargin: `${topOffset ?? '0px'} 0px ${bottomOffset ?? '0px'} 0px`
+      rootMargin: `${topOffset} ${rightOffset} ${bottomOffset} ${leftOffset}`
     });
 
     observer.observe(customRef.current);
@@ -44,7 +48,16 @@ const Waypoint: React.FC<WaypointProps> = ({
     return () => {
       observer.disconnect();
     };
-  }, [root, threshold, topOffset, bottomOffset]);
+  }, [
+    root,
+    threshold,
+    topOffset,
+    bottomOffset,
+    leftOffset,
+    rightOffset,
+    onEnter,
+    onLeave
+  ]);
 
   if (!children) {
     return (

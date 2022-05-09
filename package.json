@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-waypoint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Componentized Intersection Observer in React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

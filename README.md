@@ -7,7 +7,7 @@ Componentized [Intersection Observer API](https://developer.mozilla.org/en-US/do
 ### [Link](https://codesandbox.io/s/react-awesome-waypoint-xlcmy1?file=/src/components/Cards.tsx)
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/23455736/167336996-a6e33e9e-ea30-4943-a4bb-d81f47e497fc.gif" width="500">
+  <img src="https://user-images.githubusercontent.com/23455736/167337342-2cd2f2bc-2f67-4430-afd8-91ef45a4b641.gif" width="500">
 </div>
 
 ## Installation

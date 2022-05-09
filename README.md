@@ -133,3 +133,7 @@ const Comp = () => {
 
 export default Comp;
 ```
+
+### 4. Does it support react v18.x?
+
+Not yet.
